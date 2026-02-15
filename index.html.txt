@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BELIEVE-IT-SOLUTIONS | CARE+ Managed IT</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary:#0f2b46;
+  --accent:#1e5fa8;
+  --light:#f5f7fa;
+  --dark:#0b1e30;
+  --text:#1c1c1c;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+
+body{
+  background:var(--light);
+  color:var(--text);
+  line-height:1.6;
+  scroll-behavior:smooth;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  background:white;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 12px rgba(0,0,0,0.05);
+  z-index:1000;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--primary);
+  font-weight:600;
+  margin-left:25px;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:linear-gradient(135deg,#0f2b46,#1e5fa8);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:0 8%;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero h1{
+  font-size:56px;
+  font-weight:800;
+  max-width:800px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:20px;
+  max-width:600px;
+  margin-bottom:40px;
+}
+
+.button{
+  display:inline-block;
+  padding:14px 30px;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+  background:white;
+  color:var(--primary);
+  transition:.3s;
+}
+
+.button:hover{background:#e2e2e2;}
+
+/* Animated SVG background */
+.hero svg{
+  position:absolute;
+  bottom:-100px;
+  left:-100px;
+  width:600px;
+  opacity:0.08;
+  animation:float 12s infinite linear;
+}
+
+@keyframes float{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+
+/* Sections */
+section{padding:120px 8%;}
+.section-title{
+  font-size:40px;
+  font-weight:800;
+  color:var(--primary);
+  margin-bottom:30px;
+}
+
+/* Counter */
+.counter{
+  font-size:60px;
+  font-weight:800;
+  color:var(--accent);
+}
+
+/* Grid */
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:white;
+  padding:40px;
+  border-radius:14px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.05);
+  transition:.3s;
+}
+
+.card:hover{transform:translateY(-6px);}
+
+/* Matrix */
+.matrix table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:40px;
+}
+
+.matrix th,.matrix td{
+  padding:15px;
+  border:1px solid #ddd;
+  text-align:center;
+}
+
+.matrix th{
+  background:var(--primary);
+  color:white;
+}
+
+/* Dark section */
+.dark{
+  background:var(--primary);
+  color:white;
+  text-align:center;
+}
+
+.dark h2{color:white;}
+
+.blog-card{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 6px 25px rgba(0,0,0,0.05);
+}
+
+/* Fade */
+.fade{opacity:0;transform:translateY(20px);transition:.7s;}
+.fade.visible{opacity:1;transform:translateY(0);}
+
+footer{
+  background:var(--dark);
+  color:white;
+  padding:40px;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div><strong>BELIEVE-IT-SOLUTIONS</strong></div>
+  <div>
+    <a href="#governed">Governed</a>
+    <a href="#tiers">Tiers</a>
+    <a href="#matrix">Compare</a>
+    <a href="#blog">Insights</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Structured IT Governance Through CARE+</h1>
+  <p>Moving schools and SMEs from reactive support to controlled, protected and strategically aligned IT environments.</p>
+  <a href="#contact" class="button">Book a Discovery Consultation</a>
+
+  <svg viewBox="0 0 200 200">
+    <path fill="white" d="M40,-60C52,-52,63,-40,70,-25C77,-10,80,8,74,23C67,39,51,52,34,61C17,70,-1,74,-19,72C-36,70,-53,61,-63,47C-73,33,-76,14,-72,-3C-67,-20,-55,-35,-42,-45C-29,-56,-15,-61,1,-63C17,-66,34,-68,40,-60Z" transform="translate(100 100)" />
+  </svg>
+</section>
+
+<section id="governed" class="fade">
+  <h2 class="section-title">Endpoints Under Governance</h2>
+  <div class="counter" id="counter">0</div>
+  <p>257 Endpoints (Active + Deployment Pipeline)</p>
+  <p>CJ – 157 | STS – 90 | Leliebloem – 10</p>
+</section>
+
+<section id="tiers" class="fade">
+  <h2 class="section-title">CARE+ Tiers</h2>
+  <div class="grid-3">
+    <div class="card">
+      <h3>Insight</h3>
+      <p>Monitoring, reporting, asset visibility.</p>
+    </div>
+    <div class="card">
+      <h3>Control</h3>
+      <p>Patch management, security enforcement, governance discipline.</p>
+    </div>
+    <div class="card">
+      <h3>Protect</h3>
+      <p>Full IT governance, strategic alignment, cloud & security oversight.</p>
+    </div>
+  </div>
+</section>
+
+<section id="matrix" class="matrix fade">
+  <h2 class="section-title">Tier Comparison</h2>
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Insight</th>
+      <th>Control</th>
+      <th>Protect</th>
+    </tr>
+    <tr>
+      <td>Monitoring</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+    </tr>
+    <tr>
+      <td>Patch Management</td>
+      <td>–</td>
+      <td>✔</td>
+      <td>✔</td>
+    </tr>
+    <tr>
+      <td>Security Management</td>
+      <td>–</td>
+      <td>✔</td>
+      <td>✔</td>
+    </tr>
+    <tr>
+      <td>Strategic Planning</td>
+      <td>–</td>
+      <td>–</td>
+      <td>✔</td>
+    </tr>
+  </table>
+  <br><br>
+  <a href="#" class="button">Download CARE+ Framework PDF</a>
+</section>
+
+<section id="blog" class="fade">
+  <h2 class="section-title">Insights</h2>
+  <div class="grid-3">
+    <div class="blog-card">
+      <h4>Why Reactive IT Fails Schools</h4>
+      <p>Understanding the cost of unmanaged environments.</p>
+    </div>
+    <div class="blog-card">
+      <h4>Windows 10 EOL & Risk Mitigation</h4>
+      <p>Governance strategy before October 2025.</p>
+    </div>
+    <div class="blog-card">
+      <h4>Endpoint Visibility & Compliance</h4>
+      <p>Why asset tracking is non-negotiable.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="dark fade">
+  <h2>Move From Reactive To Structured</h2>
+  <br>
+  <a href="mailto:info@believeitsolutions.co.za" class="button">Book Consultation</a>
+</section>
+
+<footer>
+© 2026 BELIEVE-IT-SOLUTIONS | Structured Growth Through CARE+
+</footer>
+
+<script>
+/* Counter */
+let count=0;
+let target=257;
+let speed=10;
+function updateCounter(){
+  if(count<target){
+    count++;
+    document.getElementById("counter").innerText=count;
+    setTimeout(updateCounter,speed);
+  }
+}
+updateCounter();
+
+/* Fade */
+const faders=document.querySelectorAll('.fade');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+});
+faders.forEach(f=>observer.observe(f));
+</script>
+
+</body>
+</html>
